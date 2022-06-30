@@ -8,6 +8,7 @@ services:
   db:
     # образ, из которого должен быть запущен контейнер
     image: postgres:13.0-alpine
+    restart: always
     # volume и связанная с ним директория в контейнере
     volumes:
       - /var/lib/postgresql/data/
@@ -15,7 +16,7 @@ services:
     env_file:
       - ./.env
   web:
-    build: .
+    build: sapp1507/api_yamdb
     restart: always
     volumes:
       # Контейнер web будет работать с данными, хранящиеся в томе static_value, 
@@ -34,7 +35,7 @@ services:
   nginx:
     # образ, из которого должен быть запущен контейнер
     image: nginx:1.21.3-alpine
-
+    restart: always
     # запросы с внешнего порта 80 перенаправляем на внутренний порт 80
     ports:
       - "80:80"
