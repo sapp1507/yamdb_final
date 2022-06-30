@@ -1,9 +1,11 @@
 FROM python:3.7-slim
 
-
-COPY requirements.txt /app/
 WORKDIR /app
-RUN pip install -r requirements.txt --upgrade pip
-COPY . /app
+
+COPY requirements.txt .
+
+RUN pip3 install -r ./requirements.txt --no-cache-dir --upgrade pip
+
+COPY ./ .
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000"]
