@@ -3,8 +3,8 @@ name: Api-YamDB app workflow
 on:
   push:
     branches:
-      - 'main'
-      - 'add_workflow'
+      - master
+      - add_workflow
 
 jobs:
   test:
