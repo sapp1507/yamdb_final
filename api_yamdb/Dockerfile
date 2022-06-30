@@ -1,7 +1,7 @@
 FROM python:3.7-slim
 
 
-COPY ./requirements.txt /app/requirements.txt
+COPY requirements.txt /app/
 WORKDIR /app
 RUN pip install -r requirements.txt --upgrade pip
 COPY . /app
