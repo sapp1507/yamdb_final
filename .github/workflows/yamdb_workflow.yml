@@ -47,7 +47,7 @@ jobs:
       - name: Push to Docker hub
         uses: docker/build-push-action@v3
         with:
-          context: api_yamdb
+          context: api_yamdb/
           file: api_yamdb/Dockerfile
           push: true
           tags: sapp1507/api_yamdb:latest
