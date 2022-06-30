@@ -33,7 +33,7 @@ jobs:
   build_and_deploy_to_docker_hub:
     name: Push Docker image to Docket hub
     runs-on: ubuntu-latest
-    needs: tests
+    needs: test
 
     steps:
       - name: Check out the repo
