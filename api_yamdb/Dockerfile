@@ -2,9 +2,9 @@ FROM python:3.7-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY api_yamdb/requirements.txt .
 
-RUN pip3 install -r ./requirements.txt --no-cache-dir --upgrade pip
+RUN pip install -r ./requirements.txt --no-cache-dir --upgrade pip
 
 COPY ./ .
 
