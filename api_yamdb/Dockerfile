@@ -4,6 +4,6 @@ COPY ./ /app
 WORKDIR /app
 
 RUN pip install pip --upgrade
-RUN pip install -r ./requirements.txt --no-cache-dir
+RUN python -m pip install -r requirements.txt
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000"]
