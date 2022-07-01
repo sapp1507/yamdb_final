@@ -8,6 +8,6 @@ RUN pip install -r ./requirements.txt --no-cache-dir --upgrade pip
 
 COPY ./ .
 
-WORKDIR /api_yamdb
+WORKDIR /app/api_yamdb
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000"]
