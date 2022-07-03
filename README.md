@@ -2,7 +2,7 @@
 ![example workflow](https://github.com/sapp1507/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 
 
-[yamdb.ddns.net/redoc/](yamdb.ddns.net/redoc/)
+[http://yamdb.ddns.net/redoc/](http://yamdb.ddns.net/redoc/)
 ## Это <span style="color:darkred">Ya</span>mdb. Данный портал собирает отзывы пользователей на различные книги, фильмы и музыку.
 
 ### Как запустить проект на своей машине:

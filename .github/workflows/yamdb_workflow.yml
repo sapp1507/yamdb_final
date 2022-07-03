@@ -1,6 +1,9 @@
 name: Api-YamDB app workflow
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   test:
