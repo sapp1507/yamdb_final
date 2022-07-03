@@ -1,6 +1,9 @@
 name: Api-YamDB app workflow
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   test:
@@ -63,6 +66,7 @@ jobs:
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
+            sudo docker image rm sapp1507/api_yamdb
             touch .env
             echo DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }} >> .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
