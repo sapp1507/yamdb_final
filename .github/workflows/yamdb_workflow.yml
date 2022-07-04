@@ -1,9 +1,6 @@
 name: Api-YamDB app workflow
 
-on:
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
   test:
@@ -55,6 +52,7 @@ jobs:
     name: Deploy from server
     runs-on: ubuntu-latest
     needs: build_and_deploy_to_docker_hub
+    if: github.ref == 'refs/heads/master'
 
     steps:
       - name: executing remote ssh commands to deploy
